@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import './ManageBooking.css';
 
 const ManageBooking = (props) => {
-    const {img, _id, name, status} = props.content;
+    const {img, _id, name, status, email} = props.content;
     const history = useHistory()
     const handleUpdate = id => {
         fetch(`https://dark-wizard-96790.herokuapp.com/orders/${id}`, {
@@ -36,7 +36,7 @@ const ManageBooking = (props) => {
         <div className="manage-single">
             <h3>{status}</h3>
             <img src={img} alt="" />
-            <p className="text-dark">{_id}</p>
+            <p className="text-dark">{email}</p>
             <p className="text-dark">{name}</p>
             <div className="btnn">
                 <button onClick={()=> handleUpdate(_id)} className="btn btn-success me-4">Approve</button>

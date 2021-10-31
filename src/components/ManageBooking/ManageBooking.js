@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router';
 import './ManageBooking.css';
 
@@ -18,16 +18,19 @@ const ManageBooking = (props) => {
         })
     }
     const handleDelete = id => {
-        fetch(`https://dark-wizard-96790.herokuapp.com/orders/${id}`, {
-            method: 'DELETE',
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0) {
-                alert('Booking deleted');
-                history.go(0);
-            }
-        })
+        const procced = window.confirm('are you sure to delete this booking?');
+        if(procced){
+            fetch(`https://dark-wizard-96790.herokuapp.com/orders/${id}`, {
+                method: 'DELETE',
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0) {
+                    alert('Booking deleted');
+                    history.go(0);
+                }
+            })
+        }
     }
     return (
         <div className="manage-single">
@@ -36,7 +39,7 @@ const ManageBooking = (props) => {
             <p className="text-dark">{_id}</p>
             <p className="text-dark">{name}</p>
             <div className="btnn">
-                <button onClick={()=> handleUpdate(_id)} className="btn btn-success me-4">Approve</button> 
+                <button onClick={()=> handleUpdate(_id)} className="btn btn-success me-4">Approve</button>
                 <button onClick={()=> handleDelete(_id)} className="btn btn-success">Delete</button>
             </div>
         </div>

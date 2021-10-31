@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { useParams } from 'react-router';
+import { Spinner } from 'react-bootstrap';
+import { Redirect, useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import useContent from '../../hooks/useContent';
 import './SingleBooking.css';
@@ -40,9 +41,17 @@ const SingleBooking = () => {
             if(data.insertedId){
                 alert('Order Placed');
                 document.getElementById('form').reset();
+                document.getElementById('form').remove();
+                
             }
         })
         e.preventDefault();
+    }
+    const {isLoading} = useAuth();
+    if(isLoading){
+        return <div className="text-center mt-5">
+            <Spinner className="mt-5" animation="grow" />
+        </div>
     }
     return (
         <div className="order-area">

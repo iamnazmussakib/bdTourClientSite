@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import useContent from '../../hooks/useContent';
 import MyBooking from '../MyBooking/MyBooking';
@@ -15,6 +16,12 @@ const MyBookings = () => {
     
     const bookingEmail = orders.filter(order => order.email === user.email);
     console.log(bookingEmail);
+    const {isLoading} = useAuth();
+    if(isLoading){
+        return <div className="text-center mt-5">
+            <Spinner className="mt-5" animation="grow" />
+        </div>
+    }
     return (
         <div className="my-bookings-area">
             <h2 className="mt-5">My Bookings</h2>

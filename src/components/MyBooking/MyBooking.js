@@ -8,27 +8,28 @@ const MyBooking = (props) => {
     
     const history = useHistory();
     const handleDelete = id => {
-        fetch(`https://dark-wizard-96790.herokuapp.com/orders/${id}`, {
-            method: 'DELETE',
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0) {
-                alert('Booking deleted');
-                history.go(0);
-            }
-        })
+        const procced = window.confirm('are you sure to delete this booking?');
+        if(procced){
+            fetch(`https://dark-wizard-96790.herokuapp.com/orders/${id}`, {
+                method: 'DELETE',
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0) {
+                    alert('Booking deleted');
+                    history.go(0);
+                }
+            })
+        }
     }
     return (
         <div className="my-booking">
-            <div className="img-sec">
-                <h5>{order?.status}</h5>
-                <img src={order?.img} alt="" />
-            </div>
-            <div className="ms-4">
-                <h3>{order.name}</h3>
-                <p className="text-dark">{order?.userName}</p>
-                <button onClick={()=>handleDelete(order?._id)} className="btn btn-success">Delete Booking</button>
+            <h5>{order?.status}</h5>
+            <img src={order?.img} alt="" />
+            <h3>{order.name}</h3>
+            <p className="text-dark">{order?.userName}</p>
+            <div className="btnn">
+            <button onClick={()=>handleDelete(order?._id)} className="btn btn-success">Delete Booking</button>
             </div>
         </div>
     );

@@ -35,6 +35,27 @@
     gap: 50px;
 }
 
+
+.happy-client p {
+    font-size: 20px;
+}
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 0;
+}
+.about-us img {
+    width: 50%;
+}
+.about-us .about-content {
+    width: 40%;
+}
+.about-us .about-content p {
+    color: #fff;
+    margin: 50px 0;
+    font-size: 20px;
+}
 @media only screen and (max-width: 768px){
     .bookings {
         grid-template-columns: repeat(1, 1fr);
@@ -48,5 +69,24 @@
     }
     .sliders .carousel .carousel-inner .carousel-item .carousel-caption p {
         display: none;
+    }
+    
+    .about-us {
+        display: block;
+        margin: 70px 0;
+    }
+    .about-us img {
+        width: 100%;
+    }
+    .about-us .about-content {
+        width: 100%;
+    }
+    .about-us .about-content h2 {
+        margin-top: 30px;
+    }
+    .about-us .about-content p {
+        color: #fff;
+        margin: 50px 0;
+        font-size: 15px;
     }
 }

@@ -1,0 +1,52 @@
+.carousel-item {
+    position: relative;
+    
+}
+.sliders .carousel .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.5);
+    transition: opacity 400ms ease-out;
+}
+.sliders .carousel .carousel-inner .carousel-item .carousel-caption h1 {
+    position: relative;
+    border-bottom: 2px solid white;
+    width: 400px;
+    margin: 17% auto 0;
+}
+.sliders .carousel .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 20px;
+    width: 350px;
+    margin: 0 auto;
+}
+.sliders .carousel .carousel-indicators button {
+    display: none;
+}
+.booking-area {
+    margin: 100px 0;
+}
+.bookings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+@media only screen and (max-width: 768px){
+    .bookings {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+    .sliders .carousel .carousel-inner .carousel-item .carousel-caption h1 {
+       
+        margin: 10% auto 0;
+        font-size: 20px;
+        width: 80%;
+    }
+    .sliders .carousel .carousel-inner .carousel-item .carousel-caption p {
+        display: none;
+    }
+}

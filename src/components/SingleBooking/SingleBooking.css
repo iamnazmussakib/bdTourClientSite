@@ -1,0 +1,32 @@
+.add-order {
+    margin: 50px auto 150px;
+    box-shadow: 5px 10px 20px 2px rgb(211, 211, 211);
+    background: rgb(255, 255, 255);
+    padding: 100px;
+    border-radius: 50px;
+    width: 50%;
+}
+.add-order input {
+    border-radius: 10px;
+}
+.add-order textarea {
+    border-radius: 10px;
+}
+.add-order input[type=submit]{
+    padding: 10px 25px;
+}
+.add-order .input-item {
+    margin-bottom: 30px;
+}
+.add-order .dis-none {
+    display: none;
+}
+.order-area h2 {
+    margin-top: 150px;
+}
+
+@media only screen and (max-width: 768px){
+    .add-order {
+        width: 80%;
+    }
+}

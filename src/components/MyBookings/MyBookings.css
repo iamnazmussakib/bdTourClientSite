@@ -1,0 +1,18 @@
+.my-bookings-area{
+    margin-top: 150px;
+    text-align: center;
+}
+.my-bookings {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+@media only screen and (max-width: 768px){
+    .my-bookings {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+}

@@ -1,0 +1,23 @@
+.manage-book {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 200px auto;
+}
+
+
+/* @media only screen and (max-width: 768px){
+    .bookings {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    }
+    .sliders .carousel .carousel-inner .carousel-item .carousel-caption h1 {
+       
+        margin: 10% auto 0;
+        font-size: 20px;
+        width: 80%;
+    }
+    .sliders .carousel .carousel-inner .carousel-item .carousel-caption p {
+        display: none;
+    }
+} */

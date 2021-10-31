@@ -1,0 +1,33 @@
+.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(5, 129, 61, 0.7);
+    transition: opacity 400ms ease-out;
+    z-index: 9999;
+}
+.navbar img {
+    width: 50%;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar a:hover{
+    color: white;
+}
+.navbar span {
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+    .navbar {
+        position: inherit !important;
+        width: 100%;
+        background: rgb(153, 153, 153);
+    } 
+}

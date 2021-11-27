@@ -1,3 +1,11 @@
+#	The front-end of the website has been created by using ReactJS, React-Bootstrap.
+
+#	The back-end has been created by using NodeJS, connecting with MongoDB for the database.
+
+#	I have implemented the Firebase Hosting, Authentication (Login/Register) system.
+
+#	Given option for the users to manage the products globally.
+
 # BD Tourism Booking Hotel
 
 Our WebSite [bd tour](https://bd-toour.web.app/).
